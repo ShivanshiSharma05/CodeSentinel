@@ -1,10 +1,10 @@
-# 🤖 AI Code Assistant
+# 🛡️ CodeSentinel — Repository Risk & Change Intelligence Platform
 
 ### AI-Powered Repository Intelligence Platform
 
 An intelligent developer tool that analyzes public GitHub repositories, detects risky code, evaluates complexity indicators, prioritizes files, and generates actionable recommendations for developers.
 
-Unlike traditional AI assistants that require developers to manually paste code snippets, AI Code Assistant performs **repository-level automated analysis** and helps answer an important engineering question:
+Unlike traditional AI assistants that require developers to manually paste code snippets, CodeSentinel performs **repository-level automated analysis** and helps answer an important engineering question:
 
 > **Which files should I fix first?**
 
@@ -348,8 +348,8 @@ AI_Code_Assistant/
 ## 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/ShivanshiSharma05/ai-code-assistant.git
-cd ai-code-assistant
+git clone https://github.com/ShivanshiSharma05/CodeSentinel.git
+cd CodeSentinel
 ```
 
 ---
