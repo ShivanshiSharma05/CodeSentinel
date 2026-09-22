@@ -41,7 +41,7 @@ Base.metadata.create_all(bind=engine)
 # =========================================================
 
 app = FastAPI(
-    title="AI Code Assistant",
+    title="CodeSentinel",
     version="2.0.0",
     description=(
         "AI-powered repository intelligence platform that analyzes "
@@ -96,7 +96,7 @@ class RepoRequest(BaseModel):
 def home():
 
     return {
-        "message": "Welcome to AI Code Assistant",
+        "message": "Welcome to CodeSentinel",
         "version": "2.0.0",
         "features": [
             "AI Code Analysis",
@@ -362,7 +362,7 @@ def analyze_repo(
             repository = Repository(
                 name=repo_name.split("/")[-1],
                 url=f"https://github.com/{repo_name}",
-                description="Repository analyzed by AI Code Assistant"
+                description="Repository analyzed by CodeSentinel"
             )
 
             db.add(repository)

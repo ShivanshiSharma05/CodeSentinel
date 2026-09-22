@@ -1,41 +1,42 @@
 # 🛡️ CodeSentinel — Repository Risk & Change Intelligence Platform
 
-### AI-Powered Repository Intelligence Platform
+**Repository-level static analysis, risk scoring, and developer prioritization.**
 
-An intelligent developer tool that analyzes public GitHub repositories, detects risky code, evaluates complexity indicators, prioritizes files, and generates actionable recommendations for developers.
+CodeSentinel is a developer infrastructure tool that analyzes public GitHub repositories, detects potentially risky code structures, evaluates complexity indicators, ranks files by priority, and generates actionable recommendations for developers.
 
-Unlike traditional AI assistants that require developers to manually paste code snippets, CodeSentinel performs **repository-level automated analysis** and helps answer an important engineering question:
+Instead of manually reviewing every file in a repository, CodeSentinel helps answer an important engineering question:
 
-> **Which files should I fix first?**
+> **Which files should I review or fix first?**
 
 ---
 
 ## 🚀 Project Overview
 
-Modern software repositories can contain dozens or hundreds of files. Manually reviewing every file to identify complex or risky code can be time-consuming.
+Modern software repositories can contain dozens or hundreds of source files. Identifying complex or potentially risky code manually can be time-consuming.
 
-AI Code Assistant automates repository analysis by:
+CodeSentinel automates repository-level analysis by:
 
-- Fetching source files from public GitHub repositories
-- Analyzing multiple files automatically
-- Detecting syntax issues
-- Measuring code complexity indicators
-- Detecting nested loops
-- Calculating code quality scores
-- Assigning risk levels
-- Generating risk scores
-- Ranking files based on priority
-- Providing actionable developer recommendations
+* Fetching source files from public GitHub repositories.
+* Performing multi-file Python code analysis.
+* Detecting syntax issues.
+* Measuring code complexity indicators.
+* Detecting nested loops.
+* Evaluating code quality indicators.
+* Calculating risk scores.
+* Assigning risk levels.
+* Ranking files according to priority.
+* Generating actionable developer recommendations.
+* Presenting repository-level insights through a dashboard.
 
-The platform transforms raw code analysis into **Repository Intelligence**.
+The platform transforms static code analysis into an actionable **Repository Intelligence** workflow.
 
 ---
 
-# ✨ Key Features
+## ✨ Key Features
 
-## 📂 GitHub Repository Analysis
+### 📂 1. GitHub Repository Analysis
 
-Analyze public GitHub repositories using:
+Analyze public GitHub repositories using the following format:
 
 ```text
 owner/repository
@@ -47,57 +48,57 @@ Example:
 ShivanshiSharma05/ai-code-assistant-test
 ```
 
-The system automatically fetches supported source files and performs multi-file analysis.
+The system fetches supported source files and performs automated multi-file analysis.
 
 ---
 
-## 🔍 Multi-File Code Analysis
+### 🔍 2. Multi-File Code Analysis
 
-Instead of analyzing only one code snippet, the platform analyzes multiple files from a GitHub repository.
+CodeSentinel analyzes multiple files instead of requiring developers to submit individual code snippets.
 
-For each file, the system evaluates:
+For each supported file, the system evaluates:
 
-- Syntax issues
-- Code complexity
-- Loop count
-- Nested loops
-- Code quality
-- Optimization opportunities
-- Risk level
-- Priority score
-
----
-
-## 🚨 Intelligent Risk Detection
-
-Each file is classified according to its detected complexity and quality indicators.
-
-| Risk Level | Description |
-|---|---|
-| 🔴 HIGH | Complex or deeply nested logic requiring immediate attention |
-| 🟠 MEDIUM | Code that should be reviewed and improved |
-| 🟢 LOW | Healthy code with no immediate concerns |
-
-The risk classification helps developers quickly identify potentially problematic files.
+* Syntax issues
+* Code complexity indicators
+* Loop count
+* Nested loops
+* Code quality
+* Optimization indicators
+* Risk level
+* Risk score
+* Priority score
+* Developer recommendations
 
 ---
 
-## 📊 Risk Scoring System
+### 🚨 3. Risk Classification
 
-The platform calculates a risk score using multiple code characteristics.
+Files are classified according to detected complexity and quality indicators.
 
-Risk indicators include:
+| Risk Level | Description                                                                   |
+| ---------- | ----------------------------------------------------------------------------- |
+| 🔴 HIGH    | Code with higher-risk complexity or structural indicators requiring attention |
+| 🟠 MEDIUM  | Code that should be reviewed or improved                                      |
+| 🟢 LOW     | Code with relatively low detected risk indicators                             |
 
-- Moderate code quality score
-- High loop count
-- Nested loop complexity
-- Deeply nested loops
-- Complex code structure
+> Risk levels are based on the implemented static-analysis and scoring rules. They are indicators for prioritization, not proof of bugs or security vulnerabilities.
+
+---
+
+### 📊 4. Risk Scoring
+
+CodeSentinel calculates risk scores using multiple code characteristics, including:
+
+* Code quality indicators
+* Loop count
+* Nested loop complexity
+* Deeply nested logic
+* Complex code structures
 
 Example:
 
 ```text
-complex.py
+File: complex.py
 
 Risk Level: HIGH
 Risk Score: 9
@@ -106,189 +107,176 @@ Priority Score: 9
 
 ---
 
-## 🔥 Developer Priority Queue
+### 🔥 5. Developer Priority Queue
 
-Files are automatically ranked according to their priority score.
+Files are ranked according to their priority scores.
 
-This helps developers answer:
+This helps developers determine:
 
-> **What should I fix first?**
+> **What should I review or fix first?**
 
-Instead of manually reviewing every file, developers receive a prioritized list of files requiring attention.
-
----
-
-## 🎯 Developer Action Plan
-
-The system automatically categorizes files into actionable groups.
-
-### 🔥 Fix Immediately
-
-Files with high-risk scores that may affect maintainability or performance.
-
-### ⚠️ Improve Soon
-
-Files that require review or optimization.
-
-### ✅ Healthy Files
-
-Files with low risk that currently require no immediate action.
+The priority ranking allows developers to focus their attention on files with higher detected risk indicators.
 
 ---
 
-## 📈 Repository Intelligence Dashboard
+### 🎯 6. Developer Action Plan
+
+CodeSentinel groups files into actionable categories.
+
+#### 🔥 Fix Immediately
+
+Files with high-risk scores that may require immediate review because of complexity or maintainability indicators.
+
+#### ⚠️ Improve Soon
+
+Files that require additional review, refactoring, or optimization.
+
+#### ✅ Healthy Files
+
+Files with relatively low detected risk indicators and no immediate action suggested by the implemented rules.
+
+---
+
+### 📈 7. Repository Intelligence Dashboard
 
 The Streamlit dashboard provides:
 
-- Total files analyzed
-- High-risk file count
-- Medium-risk file count
-- Low-risk file count
-- Repository risk distribution
-- Developer priority queue
-- Developer action plan
-- Detailed file analysis
-- File-level recommendations
+* Total files analyzed
+* High-risk file count
+* Medium-risk file count
+* Low-risk file count
+* Risk distribution
+* Developer priority queue
+* Developer action plan
+* Detailed file analysis
+* File-level recommendations
 
 ---
 
-# 📸 Screenshots
+## 📸 Screenshots
 
-## Repository Intelligence Dashboard
+### 1. CodeSentinel Dashboard
 
-![Repository Intelligence Dashboard](screenshots/dashboard.png)
+The main dashboard provides the repository input interface and platform overview.
 
-## Hard Test – Risk Detection
-
-![Hard Test Risk Detection](screenshots/hard-test.png)
+![CodeSentinel Dashboard](screenshots/dashboard-home.png)
 
 ---
 
-# 🧠 What Makes This Different From ChatGPT?
+### 2. Repository Overview
 
-A common question is:
+The Repository Overview tab displays file counts, risk metrics, and the risk distribution chart.
 
-> **Why use this project when ChatGPT can analyze code?**
+![Repository Overview](screenshots/repository-overview.png)
 
-Traditional AI chat assistants generally require developers to:
+---
 
-1. Copy code manually
-2. Paste code into the chat
-3. Ask for analysis
-4. Repeat the process for multiple files
+### 3. Developer Priority Queue
 
-AI Code Assistant automates this workflow at the repository level.
+The Priority Queue displays analyzed files ordered by risk score.
 
-| Feature | Traditional AI Chat | AI Code Assistant |
-|---|---|---|
-| Analyze code snippets | ✅ | ✅ |
-| Automatically fetch GitHub repositories | ❌ | ✅ |
-| Analyze multiple files | Limited | ✅ |
-| Repository-level analysis | ❌ | ✅ |
-| Automated risk scoring | ❌ | ✅ |
-| File priority ranking | ❌ | ✅ |
-| Developer action plan | ❌ | ✅ |
-| Repository intelligence dashboard | ❌ | ✅ |
+![Developer Priority Queue](screenshots/priority-queue.png)
 
-The purpose of this project is not to replace AI assistants.
+---
 
-Instead, it provides a specialized engineering workflow:
+### 4. Developer Action Plan
+
+The Action Plan organizes files into review categories and displays recommendations.
+
+![Developer Action Plan](screenshots/action-plan.png)
+
+---
+
+### 5. Detailed File Analysis
+
+The File Details tab provides individual file-level metrics and recommendations.
+
+![Detailed File Analysis](screenshots/file-details.png)
+
+---
+
+### 6. Risk Detection Test
+
+CodeSentinel was tested using files with different complexity levels.
+
+![Risk Detection Test](screenshots/hard-test.png)
+
+---
+
+## 🏗️ System Architecture
 
 ```text
-GitHub Repository
-        ↓
-Automatic Multi-File Analysis
-        ↓
-Complexity Detection
-        ↓
-Risk Scoring
-        ↓
-Priority Ranking
-        ↓
-Developer Action Plan
-```
-
-The main goal is to help developers answer:
-
-> **Which parts of my repository require attention first?**
-
----
-
-# 🏗️ System Architecture
-
-```text
-                    ┌──────────────────────┐
-                    │  GitHub Repository   │
-                    └───────────┬──────────┘
+                 ┌─────────────────────────┐
+                 │    GitHub Repository    │
+                 └────────────┬────────────┘
+                              │
+                              ▼
+                 ┌─────────────────────────┐
+                 │     GitHub Service      │
+                 │   Repository Fetching   │
+                 └────────────┬────────────┘
+                              │
+                              ▼
+                 ┌─────────────────────────┐
+                 │   Repository Analyzer   │
+                 │    Multi-File Analysis  │
+                 └────────────┬────────────┘
+                              │
+               ┌──────────────┼──────────────┐
+               ▼              ▼              ▼
+      ┌────────────────┐ ┌──────────────┐ ┌──────────────────┐
+      │ Code Analysis  │ │ Risk Analysis│ │ Repository       │
+      │ Complexity     │ │ Risk Scoring │ │ Intelligence     │
+      └────────┬───────┘ └──────┬───────┘ └────────┬─────────┘
+               │                │                  │
+               └────────────────┼──────────────────┘
                                 │
                                 ▼
-                    ┌──────────────────────┐
-                    │   GitHub Service     │
-                    │ Repository Fetching  │
-                    └───────────┬──────────┘
-                                │
-                                ▼
-                    ┌──────────────────────┐
-                    │ Repository Analyzer  │
-                    │ Multi-File Analysis  │
-                    └───────────┬──────────┘
-                                │
-              ┌─────────────────┼─────────────────┐
-              ▼                 ▼                 ▼
-      ┌───────────────┐ ┌───────────────┐ ┌──────────────────┐
-      │ Code Analyzer │ │ Risk Analyzer │ │ Repository       │
-      │ Complexity    │ │ Risk Scoring  │ │ Intelligence     │
-      └───────┬───────┘ └───────┬───────┘ └────────┬─────────┘
-              │                 │                  │
-              └─────────────────┼──────────────────┘
-                                │
-                                ▼
-                    ┌──────────────────────┐
-                    │   FastAPI Backend    │
-                    └───────────┬──────────┘
-                                │
-                                ▼
-                    ┌──────────────────────┐
-                    │ Streamlit Dashboard  │
-                    └──────────────────────┘
+                 ┌─────────────────────────┐
+                 │     FastAPI Backend     │
+                 └────────────┬────────────┘
+                              │
+                              ▼
+                 ┌─────────────────────────┐
+                 │   Streamlit Dashboard   │
+                 └─────────────────────────┘
 ```
 
 ---
 
-# 🛠️ Tech Stack
+## 🛠️ Technology Stack
 
-## Backend
+### Backend
 
-- Python
-- FastAPI
-- SQLAlchemy
-- PostgreSQL
-- JWT Authentication
-- GitHub REST API
+* Python
+* FastAPI
+* SQLAlchemy
+* PostgreSQL
+* JWT Authentication
+* GitHub REST API
 
-## Analysis Engine
+### Analysis Engine
 
-- Python AST
-- Custom Complexity Analysis
-- Risk Analyzer
-- Repository Intelligence Engine
-- Priority Scoring Algorithm
+* Python AST
+* Custom complexity analysis
+* Risk analysis
+* Repository intelligence
+* Priority scoring algorithm
 
-## Frontend
+### Frontend and Visualization
 
-- Streamlit
-- Pandas
-- Matplotlib
+* Streamlit
+* Pandas
+* Matplotlib
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```text
-AI_Code_Assistant/
+CodeSentinel/
 │
 ├── backend/
-│   │
 │   ├── api/
 │   │   ├── __init__.py
 │   │   ├── auth.py
@@ -341,79 +329,79 @@ AI_Code_Assistant/
 └── requirements.txt
 ```
 
+> The structure above should match the actual repository. If a file or directory has a different name in your current project, use the actual name from your repository.
+
 ---
 
-# ⚙️ Installation
+## ⚙️ Installation
 
-## 1️⃣ Clone the Repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/ShivanshiSharma05/CodeSentinel.git
 cd CodeSentinel
 ```
 
----
-
-## 2️⃣ Create a Virtual Environment
+### 2. Create a Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-### Windows
+#### Windows
 
-```bash
+```powershell
 venv\Scripts\activate
 ```
 
-### Linux/macOS
+#### Linux/macOS
 
 ```bash
 source venv/bin/activate
 ```
 
----
-
-## 3️⃣ Install Dependencies
+### 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
+If your backend uses a separate requirements file, install that file according to the repository structure.
+
 ---
 
-# 🔐 Environment Configuration
+## 🔐 Environment Configuration
 
-Create a `.env` file and configure your environment variables.
+Create a `.env` file in the appropriate project directory.
 
 Example:
 
 ```env
 GITHUB_TOKEN=your_github_personal_access_token
-```
 
-For backend configuration:
-
-```env
 DATABASE_URL=postgresql://username:password@localhost:5432/database_name
+
 SECRET_KEY=your_secret_key
 ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=60
 ```
 
-⚠️ Never upload your actual `.env` file or credentials to GitHub.
+### Security Notes
 
-Use `.env.example` files instead.
+* Do not upload your actual `.env` file to GitHub.
+* Do not commit passwords, API tokens, or secret keys.
+* Use `.env.example` for configuration documentation.
+* Rotate any credential that has accidentally been exposed.
 
 ---
 
-# ▶️ Running the Application
+## ▶️ Running the Application
 
-## Run Backend
+### Run the Backend
 
-Open a terminal:
+Open a terminal in the project directory:
 
-```bash
+```powershell
 cd backend
 uvicorn main:app --reload
 ```
@@ -424,67 +412,61 @@ Backend server:
 http://127.0.0.1:8000
 ```
 
-API Documentation:
+API documentation:
 
 ```text
 http://127.0.0.1:8000/docs
 ```
 
----
+### Run the Frontend
 
-## Run Frontend
+Open a second terminal:
 
-Open another terminal:
-
-```bash
+```powershell
 cd frontend
 streamlit run app.py
 ```
 
-The Streamlit dashboard will open automatically.
+The Streamlit dashboard will open in your browser.
 
 ---
 
-# 🔗 API Endpoints
+## 🔗 API Endpoints
 
-## Authentication
+### Authentication
 
-| Method | Endpoint | Description |
-|---|---|---|
-| POST | `/auth/signup` | Register a new user |
-| POST | `/auth/login` | Login user |
-| GET | `/auth/me` | Get current user |
+| Method | Endpoint       | Description               |
+| ------ | -------------- | ------------------------- |
+| POST   | `/auth/signup` | Register a new user       |
+| POST   | `/auth/login`  | Log in a user             |
+| GET    | `/auth/me`     | Retrieve the current user |
 
----
+### Repository Management
 
-## Repository Management
+| Method | Endpoint                        | Description           |
+| ------ | ------------------------------- | --------------------- |
+| GET    | `/repositories/`                | Retrieve repositories |
+| POST   | `/repositories/`                | Add a repository      |
+| GET    | `/repositories/{repository_id}` | Retrieve a repository |
+| DELETE | `/repositories/{repository_id}` | Delete a repository   |
 
-| Method | Endpoint | Description |
-|---|---|---|
-| GET | `/repositories/` | Get repositories |
-| POST | `/repositories/` | Add repository |
-| GET | `/repositories/{repository_id}` | Get repository |
-| DELETE | `/repositories/{repository_id}` | Delete repository |
+### Code Analysis
 
----
+| Method | Endpoint                     | Description                 |
+| ------ | ---------------------------- | --------------------------- |
+| POST   | `/generate-code/`            | Generate code               |
+| POST   | `/generate-comment/`         | Generate code comments      |
+| POST   | `/generate-inline-comments/` | Generate inline comments    |
+| POST   | `/analyze/`                  | Analyze code                |
+| POST   | `/analyze-repo/`             | Analyze a GitHub repository |
 
-## AI Code Analysis
-
-| Method | Endpoint | Description |
-|---|---|---|
-| POST | `/generate-code/` | Generate code |
-| POST | `/generate-comment/` | Generate code comments |
-| POST | `/generate-inline-comments/` | Generate inline comments |
-| POST | `/analyze/` | Analyze code |
-| POST | `/analyze-repo/` | Analyze GitHub repository |
+> Verify endpoint names against the current FastAPI routes before making changes to this table.
 
 ---
 
-# 🧪 Testing the Risk Detection System
+## 🧪 Risk Detection Testing
 
-The project was tested using files with different complexity levels.
-
-Test files:
+CodeSentinel was tested using files with different complexity levels:
 
 ```text
 complex.py
@@ -494,13 +476,13 @@ simple.py
 
 ### Example Results
 
-| File | Complexity | Risk Level | Priority |
-|---|---|---|---|
-| complex.py | O(n^k) | 🔴 HIGH | 9 |
-| medium.py | O(n^k) | 🔴 HIGH | 9 |
-| simple.py | O(1) | 🟢 LOW | 0 |
+| File         | Complexity | Risk Level | Priority |
+| ------------ | ---------- | ---------- | -------- |
+| `complex.py` | `O(n^k)`   | 🔴 HIGH    | 9        |
+| `medium.py`  | `O(n^k)`   | 🔴 HIGH    | 9        |
+| `simple.py`  | `O(1)`     | 🟢 LOW     | 0        |
 
-Example analysis output:
+Example analysis response:
 
 ```json
 {
@@ -514,11 +496,11 @@ Example analysis output:
 }
 ```
 
-This demonstrates that the system can differentiate between complex and simple code structures.
+The test demonstrates that the system can differentiate between code structures with different detected complexity and risk indicators.
 
 ---
 
-# 📊 Example File Analysis
+## 📊 Example File Analysis
 
 ```json
 {
@@ -538,56 +520,66 @@ This demonstrates that the system can differentiate between complex and simple c
 
 ---
 
-# 🎯 Key Innovation
+## 🧠 Engineering Workflow
 
-The core innovation of AI Code Assistant is the combination of:
+CodeSentinel combines repository fetching, static analysis, risk scoring, and file prioritization into one workflow.
 
 ```text
-Multi-File Analysis
-        +
+GitHub Repository
+        │
+        ▼
+Automatic Multi-File Analysis
+        │
+        ▼
 Complexity Detection
-        +
+        │
+        ▼
 Risk Scoring
-        +
+        │
+        ▼
 Priority Ranking
-        +
-Repository Intelligence
+        │
+        ▼
+Developer Action Plan
 ```
 
-The system transforms raw analysis into an actionable developer workflow:
-
-```text
-Analyze
-   ↓
-Detect Risk
-   ↓
-Rank Files
-   ↓
-Recommend Action
-```
-
-Instead of simply reporting issues, the platform helps developers prioritize engineering attention.
+The goal is not to replace general-purpose AI assistants. CodeSentinel focuses on an automated repository-analysis workflow that helps developers identify which files deserve attention first.
 
 ---
 
-# 🔮 Future Improvements
+## 🎯 Key Engineering Contributions
 
-Potential future enhancements include:
-
-- AI-powered semantic bug detection
-- Code smell detection
-- Security vulnerability scanning
-- Pull request analysis
-- GitHub Actions integration
-- Automated PR recommendations
-- Historical repository risk tracking
-- Team-based dashboards
-- Trend analysis
-- Support for additional programming languages
+* Built a FastAPI-based backend for repository analysis.
+* Integrated GitHub repository fetching.
+* Designed multi-file Python static analysis.
+* Used Python AST-based analysis and structural indicators.
+* Developed risk scoring and priority ranking logic.
+* Created a Streamlit dashboard for repository intelligence.
+* Added authentication and database-backed repository management.
+* Validated risk classification using a test repository with different code complexity levels.
 
 ---
 
-# 👩‍💻 Author
+## 🔮 Future Improvements
+
+Potential future improvements include:
+
+* Git commit comparison
+* Change-based risk regression detection
+* Historical repository risk tracking
+* Pull request analysis
+* GitHub Actions integration
+* Code smell detection
+* Security analysis integrations
+* Support for additional programming languages
+* Team-based dashboards
+* Repository risk trend analysis
+
+These improvements are optional extensions and are not required for the current project version.
+
+---
+
+## 👩‍💻 Author
 
 **Shivanshi Sharma**
 
@@ -595,34 +587,32 @@ B.Tech Computer Science Engineering
 
 Aspiring Software Engineer | Software Development | AI & Machine Learning Enthusiast
 
+* GitHub: [ShivanshiSharma05](https://github.com/ShivanshiSharma05)
+* Project Repository: [CodeSentinel](https://github.com/ShivanshiSharma05/CodeSentinel)
+
 ---
 
-# ⭐ Final Takeaway
+## ⭐ Final Takeaway
 
-AI Code Assistant transforms traditional repository analysis:
-
-```text
-Manual Code Review
-        ↓
-Time Consuming
-        ↓
-Difficult to Prioritize
-```
-
-Into:
+CodeSentinel transforms repository review from a manual process into a structured workflow:
 
 ```text
-Automated Repository Analysis
-        ↓
-Complexity Detection
-        ↓
-Risk Detection
-        ↓
+Manual Repository Review
+        │
+        ▼
+Time-Consuming File Inspection
+        │
+        ▼
+Automated Multi-File Analysis
+        │
+        ▼
+Complexity and Risk Detection
+        │
+        ▼
 Priority Ranking
-        ↓
-Actionable Developer Plan
+        │
+        ▼
+Actionable Developer Recommendations
 ```
 
-The ultimate goal is simple:
-
-> **Help developers understand what to fix first.**
+> **CodeSentinel helps developers understand what to review or fix first in their repositories.**
