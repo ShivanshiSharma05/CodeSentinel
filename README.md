@@ -195,14 +195,6 @@ The File Details tab provides individual file-level metrics and recommendations.
 
 ---
 
-### 6. Risk Detection Test
-
-CodeSentinel was tested using files with different complexity levels.
-
-![Risk Detection Test](screenshots/hard-test.png)
-
----
-
 ## 🏗️ System Architecture
 
 ```text
